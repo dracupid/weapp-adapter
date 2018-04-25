@@ -1,9 +1,11 @@
-import * as _window from './window'
+import * as __window from './window'
 import document from './document'
 
 const global = GameGlobal
 
 function inject () {
+  let _window = Object.assign({}, __window)
+
   _window.document = document;
 
   _window.addEventListener = (type, listener) => {
